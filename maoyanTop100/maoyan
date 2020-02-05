@@ -7,39 +7,45 @@ from requests.exceptions import RequestException
 
 def get_one_page(url):
     try:
-        headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36',
-                 'Cookie':'__mta=213243435.1580726146080.1580899471949.1580899481990.8; uuid_n_v=v1; uuid=EF7B5420467011EA985FB9003DCB57C1C4D48DCE9D6E4F5B85A1F0AD414A8CD0; _lxsdk_cuid=1700a9ed35ac8-0d7a15c85717bd-b383f66-1fa400-1700a9ed35bc8; _lxsdk=EF7B5420467011EA985FB9003DCB57C1C4D48DCE9D6E4F5B85A1F0AD414A8CD0; mojo-uuid=b8a8d7049b7286ac09b2b17e76db7040; _csrf=76f9b719665f8766381c4c9655854a454e40634ab3e9565a8c6a3047eb12f1e3; mojo-session-id={"id":"aeb9c12a58f49947f425b273667d1d26","time":1580899468655}; Hm_lvt_703e94591e87be68cc8da0da7cbd0be2=1580726146,1580888057,1580899469; _lx_utm=utm_source%3DBaidu%26utm_medium%3Dorganic; __mta=213243435.1580726146080.1580888069136.1580899470182.7; mojo-trace-id=6; Hm_lpvt_703e94591e87be68cc8da0da7cbd0be2=1580899482; _lxsdk_s=17014f38599-24-fdd-512%7C%7C10__mta=213243435.1580726146080.1580899471949.1580899481990.8; uuid_n_v=v1; uuid=EF7B5420467011EA985FB9003DCB57C1C4D48DCE9D6E4F5B85A1F0AD414A8CD0; _lxsdk_cuid=1700a9ed35ac8-0d7a15c85717bd-b383f66-1fa400-1700a9ed35bc8; _lxsdk=EF7B5420467011EA985FB9003DCB57C1C4D48DCE9D6E4F5B85A1F0AD414A8CD0; mojo-uuid=b8a8d7049b7286ac09b2b17e76db7040; _csrf=76f9b719665f8766381c4c9655854a454e40634ab3e9565a8c6a3047eb12f1e3; mojo-session-id={"id":"aeb9c12a58f49947f425b273667d1d26","time":1580899468655}; Hm_lvt_703e94591e87be68cc8da0da7cbd0be2=1580726146,1580888057,1580899469; _lx_utm=utm_source%3DBaidu%26utm_medium%3Dorganic; __mta=213243435.1580726146080.1580888069136.1580899470182.7; mojo-trace-id=6; Hm_lpvt_703e94591e87be68cc8da0da7cbd0be2=1580899482; _lxsdk_s=17014f38599-24-fdd-512%7C%7C10',
-                 'Host':'maoyan.com',
-                 'referer':'https://maoyan.com/board'}
-        response=requests.get(url,headers=headers)
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36',
+            'Cookie': '__mta=213243435.1580726146080.1580899471949.1580899481990.8; uuid_n_v=v1; uuid=EF7B5420467011EA985FB9003DCB57C1C4D48DCE9D6E4F5B85A1F0AD414A8CD0; _lxsdk_cuid=1700a9ed35ac8-0d7a15c85717bd-b383f66-1fa400-1700a9ed35bc8; _lxsdk=EF7B5420467011EA985FB9003DCB57C1C4D48DCE9D6E4F5B85A1F0AD414A8CD0; mojo-uuid=b8a8d7049b7286ac09b2b17e76db7040; _csrf=76f9b719665f8766381c4c9655854a454e40634ab3e9565a8c6a3047eb12f1e3; mojo-session-id={"id":"aeb9c12a58f49947f425b273667d1d26","time":1580899468655}; Hm_lvt_703e94591e87be68cc8da0da7cbd0be2=1580726146,1580888057,1580899469; _lx_utm=utm_source%3DBaidu%26utm_medium%3Dorganic; __mta=213243435.1580726146080.1580888069136.1580899470182.7; mojo-trace-id=6; Hm_lpvt_703e94591e87be68cc8da0da7cbd0be2=1580899482; _lxsdk_s=17014f38599-24-fdd-512%7C%7C10__mta=213243435.1580726146080.1580899471949.1580899481990.8; uuid_n_v=v1; uuid=EF7B5420467011EA985FB9003DCB57C1C4D48DCE9D6E4F5B85A1F0AD414A8CD0; _lxsdk_cuid=1700a9ed35ac8-0d7a15c85717bd-b383f66-1fa400-1700a9ed35bc8; _lxsdk=EF7B5420467011EA985FB9003DCB57C1C4D48DCE9D6E4F5B85A1F0AD414A8CD0; mojo-uuid=b8a8d7049b7286ac09b2b17e76db7040; _csrf=76f9b719665f8766381c4c9655854a454e40634ab3e9565a8c6a3047eb12f1e3; mojo-session-id={"id":"aeb9c12a58f49947f425b273667d1d26","time":1580899468655}; Hm_lvt_703e94591e87be68cc8da0da7cbd0be2=1580726146,1580888057,1580899469; _lx_utm=utm_source%3DBaidu%26utm_medium%3Dorganic; __mta=213243435.1580726146080.1580888069136.1580899470182.7; mojo-trace-id=6; Hm_lpvt_703e94591e87be68cc8da0da7cbd0be2=1580899482; _lxsdk_s=17014f38599-24-fdd-512%7C%7C10',
+            'Host': 'maoyan.com',
+            'referer': 'https://maoyan.com/board'}
+        response = requests.get(url, headers=headers)
         if response.status_code == 200:
             return response.text
         return None
     except RequestException:
         return None
 
+
 def parse_one_page(html):
     pattern = re.compile('<dd>.*?board-index.*?>(\d+)</i>.*?data-src="(.*?)".*?name"><a'
                          + '.*?>(.*?)</a>.*?star">(.*?)</p>.*?releasetime">(.*?)</p>'
                          + '.*?integer">(.*?)</i>.*?fraction">(.*?)</i>.*?</dd>', re.S)
-    items=re.findall(pattern,html)
+    items = re.findall(pattern, html)
     for item in items:
-        yield {'index':item[0],'image':item[1],'title':item[2].strip(),'actor':item[3].strip()[3:],'time':item[4].strip()[5:],'score':item[5].strip()+item[6].strip()}
+        yield {'index': item[0], 'image': item[1], 'title': item[2].strip(), 'actor': item[3].strip()[3:],
+               'time': item[4].strip()[5:], 'score': item[5].strip() + item[6].strip()}
+
 
 def write_to_file(content):
-    with open('maoyanresult.txt','a',encoding='utf-8')as f:
-        f.write(json.dumps(content,ensure_ascii=False)+'\n')
+    with open('maoyanresult.txt', 'a', encoding='utf-8')as f:
+        f.write(json.dumps(content, ensure_ascii=False) + '\n')
 
-main（）:
+
+def main():
     for i in range(10):
-        if i==0:
-            url='http://maoyan.com/board/4'
-        else :
-            url='http://maoyan.com/board/4?offset='+str(i*10)
-        html=get_one_page(url)
+        if i == 0:
+            url = 'http://maoyan.com/board/4'
+        else:
+            url = 'http://maoyan.com/board/4?offset=' + str(i * 10)
+        html = get_one_page(url)
         for item in parse_one_page(html):
             print(item)
             write_to_file(item)
 
-if __name__ == '__main__' :
+if __name__ == '__main__':
     main()
+
